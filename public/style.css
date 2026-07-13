@@ -463,11 +463,13 @@ body {
 
 .place-title-area {
     display: flex;
-    flex-direction: column;
-    gap: 6px;
-    padding-right: 12px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
     flex: 1;
     min-width: 0;
+    width: 100%;
 }
 
 .place-name {
@@ -475,6 +477,8 @@ body {
     font-weight: 600;
     line-height: 1.3;
     word-break: break-word;
+    flex: 1;
+    min-width: 120px;
 }
 
 .place-type {
@@ -486,7 +490,8 @@ body {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    align-self: flex-start;
+    align-self: center;
+    flex-shrink: 0;
 }
 
 /* Type Colors */
@@ -744,23 +749,5 @@ body {
     
     .fab-container {
         bottom: 30px;
-    }
-
-    .place-title-area {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-        gap: 12px;
-        flex-wrap: wrap;
-    }
-
-    .place-name {
-        flex: 1;
-        min-width: 120px;
-    }
-
-    .place-type {
-        flex-shrink: 0;
     }
 }
