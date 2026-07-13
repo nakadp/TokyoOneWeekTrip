@@ -249,19 +249,26 @@ body {
     box-shadow: 0 0 0 1px var(--primary-color), var(--shadow-sm);
 }
 
+.day-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 6px;
+    gap: 8px;
+}
+
 .day-date {
     font-size: 0.75rem;
     font-weight: 600;
     color: var(--primary-color);
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    margin-bottom: 6px;
+    flex-shrink: 0;
 }
 
 .day-title {
     font-size: 1rem;
     font-weight: 600;
-    margin-bottom: 8px;
 }
 
 .day-summary {
@@ -737,5 +744,23 @@ body {
     
     .fab-container {
         bottom: 30px;
+    }
+
+    .place-title-area {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+
+    .place-name {
+        flex: 1;
+        min-width: 120px;
+    }
+
+    .place-type {
+        flex-shrink: 0;
     }
 }
