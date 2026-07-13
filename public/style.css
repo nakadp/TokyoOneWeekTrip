@@ -77,8 +77,8 @@ body {
     flex-direction: column;
 }
 
-.ui-layer > * {
-    pointer-events: auto; /* Reactivate clicks on UI elements */
+.app-header, .sidebar, .fab, .mobile-mask {
+    pointer-events: auto; /* Enable clicks on interactive components only */
 }
 
 /* Glassmorphism Panel Utility */
