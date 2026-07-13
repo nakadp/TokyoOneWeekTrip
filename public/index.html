@@ -37,6 +37,10 @@
                 <select id="trip-selector" class="modern-select">
                     <!-- Options will be populated by JS -->
                 </select>
+                <button id="booking-btn" class="modern-btn">
+                    <i class="fa-solid fa-ticket"></i>
+                    <span>预订清单</span>
+                </button>
             </div>
         </header>
 
@@ -87,6 +91,117 @@
             </button>
         </div>
 
+    </div>
+
+    <!-- Booking Modal -->
+    <div id="booking-modal" class="modal-overlay">
+        <div class="modal-content glass-panel">
+            <div class="modal-header">
+                <h2><i class="fa-solid fa-clipboard-list"></i> 提前预订项目清单汇总</h2>
+                <button class="close-modal-btn" id="close-modal-btn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <!-- Hotels Section -->
+                <div class="booking-section">
+                    <div class="booking-section-title">🏨 酒店住宿 (已完成预定)</div>
+                    <div class="booking-grid">
+                        <div class="booking-card">
+                            <div class="booking-icon hotel"><i class="fa-solid fa-hotel"></i></div>
+                            <div class="booking-info">
+                                <h4>HOTEL AMANEK Asakusa Ekimae</h4>
+                                <p><strong>时间：</strong>7月22日 - 7月24日 (2晚)</p>
+                                <p><strong>地址：</strong>东京都台东区驹形2-1-11 (浅草站旁)</p>
+                            </div>
+                            <span class="booking-badge">已完成</span>
+                        </div>
+                        <div class="booking-card">
+                            <div class="booking-icon hotel"><i class="fa-solid fa-hotel"></i></div>
+                            <div class="booking-info">
+                                <h4>嵐酒店 大国町店 (Hotel Arashi)</h4>
+                                <p><strong>时间：</strong>7月25日 - 7月26日 (1晚，26日中午退房行李寄存)</p>
+                                <p><strong>地址：</strong>大阪市浪速区敷津西2-4-10 (大国町站旁)</p>
+                            </div>
+                            <span class="booking-badge">已完成</span>
+                        </div>
+                        <div class="booking-card">
+                            <div class="booking-icon hotel"><i class="fa-solid fa-hotel"></i></div>
+                            <div class="booking-info">
+                                <h4>KOKO酒店 浅草驹形</h4>
+                                <p><strong>时间：</strong>7月27日 - 7月29日 (2晚)</p>
+                                <p><strong>地址：</strong>东京都台东区雷门2-20-4 (浅草站旁)</p>
+                            </div>
+                            <span class="booking-badge">已完成</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Transport Section -->
+                <div class="booking-section">
+                    <div class="booking-section-title">🚌 跨城交通 (已完成预定)</div>
+                    <div class="booking-grid">
+                        <div class="booking-card">
+                            <div class="booking-icon transit"><i class="fa-solid fa-bus"></i></div>
+                            <div class="booking-info">
+                                <h4>东京 ➔ 大阪 夜行巴士 (去程)</h4>
+                                <p><strong>乘车时间：</strong>7月24日 24:15 发车 (7/25 07:30 抵达)</p>
+                                <p><strong>乘车地点：</strong>东京站八重洲南口巴士总站</p>
+                                <p><strong>目的地：</strong>难波 OCAT 巴士总站</p>
+                            </div>
+                            <span class="booking-badge">已完成</span>
+                        </div>
+                        <div class="booking-card">
+                            <div class="booking-icon transit"><i class="fa-solid fa-bus"></i></div>
+                            <div class="booking-info">
+                                <h4>大阪 ➔ 东京 夜行巴士 (回程)</h4>
+                                <p><strong>乘车时间：</strong>7月26日 21:20 发车 (7/27 06:20 抵达)</p>
+                                <p><strong>乘车地点：</strong>天王寺公园东侧巴士停车场 (てんしば＋プラス前)</p>
+                                <p><strong>目的地：</strong>新宿高速巴士总站 (Busta 新宿)</p>
+                            </div>
+                            <span class="booking-badge">已完成</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Attractions Section -->
+                <div class="booking-section">
+                    <div class="booking-section-title">🎟️ 推荐提前预约门票 (建议操作)</div>
+                    <div class="booking-grid">
+                        <div class="booking-card">
+                            <div class="booking-icon attraction"><i class="fa-solid fa-ticket"></i></div>
+                            <div class="booking-info">
+                                <h4>东京晴空塔 (Tokyo Skytree) 门票</h4>
+                                <p><strong>推荐预约：</strong>7月24日 14:00 - 16:00 场次</p>
+                                <p><strong>说明：</strong>建议提前在 Klook 或官网预约，避免暑期排队购票。</p>
+                            </div>
+                        </div>
+                        <div class="booking-card">
+                            <div class="booking-icon attraction"><i class="fa-solid fa-ticket"></i></div>
+                            <div class="booking-info">
+                                <h4>大阪海游馆门票</h4>
+                                <p><strong>推荐预约：</strong>7月26日 09:30 - 10:00 场次</p>
+                                <p><strong>说明：</strong>馆内限流，提前线上买好指定时间入场的电子票，能节省大把时间。</p>
+                            </div>
+                        </div>
+                        <div class="booking-card">
+                            <div class="booking-icon attraction"><i class="fa-solid fa-ticket"></i></div>
+                            <div class="booking-info">
+                                <h4>梅田空中庭园展望台 / 阿倍野 HARUKAS 300</h4>
+                                <p><strong>推荐预约：</strong>7月26日 15:30 (梅田) 与 18:30 (阿倍野)</p>
+                                <p><strong>说明：</strong>空中庭园可通过电子购票；阿倍野 300 建议提前线上购票省去排队麻烦。</p>
+                            </div>
+                        </div>
+                        <div class="booking-card">
+                            <div class="booking-icon attraction"><i class="fa-solid fa-ticket"></i></div>
+                            <div class="booking-info">
+                                <h4>SHIBUYA SKY 展望台 (可选)</h4>
+                                <p><strong>推荐预约：</strong>7月27日 14:30 场次</p>
+                                <p><strong>说明：</strong>如需去涩谷最热展望台，<strong>必须提前4周（日本时间零点）</strong>在官网抢购，否则现场无票。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- Leaflet JS -->

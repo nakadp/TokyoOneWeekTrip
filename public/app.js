@@ -120507,6 +120507,7 @@ document.addEventListener('DOMContentLoaded', () => {
   populateTripSelector();
   initMobileInteractions();
   renderUI();
+  initBookingModal();
 });
 
 // 移动端交互事件
@@ -120944,4 +120945,30 @@ function getIconClassForType(type) {
     'hotel': 'fa-solid fa-bed'
   };
   return icons[type] || 'fa-solid fa-location-dot';
+}
+
+// --- 7. 预订清单 Modal 控制 ---
+function initBookingModal() {
+  const bookingBtn = document.getElementById('booking-btn');
+  const bookingModal = document.getElementById('booking-modal');
+  const closeModalBtn = document.getElementById('close-modal-btn');
+  
+  if (bookingBtn && bookingModal) {
+    bookingBtn.addEventListener('click', () => {
+      bookingModal.classList.add('active');
+    });
+  }
+  
+  if (bookingModal && closeModalBtn) {
+    closeModalBtn.addEventListener('click', () => {
+      bookingModal.classList.remove('active');
+    });
+    
+    // 点击遮罩层关闭
+    bookingModal.addEventListener('click', (e) => {
+      if (e.target === bookingModal) {
+        bookingModal.classList.remove('active');
+      }
+    });
+  }
 }
