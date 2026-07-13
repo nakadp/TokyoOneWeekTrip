@@ -15,6 +15,11 @@
     --color-transit: #0ea5e9; /* Sky Blue */
     --color-shopping: #ec4899; /* Pink */
     
+    /* Route Line Colors */
+    --route-walk: #10b981;
+    --route-train: #3b82f6;
+    --route-bus: #f59e0b;
+    
     /* Typography */
     --font-family: 'Inter', 'Noto Sans SC', sans-serif;
     
